@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(216deg, 55%, 11%);
+  font-family: "Outfit";
+}
+
+main {
+  width: 25%;
+  margin: 5% auto;
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 3.5%;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 3.5%;
+}
+.image-container:hover {
+  background-color: hsl(178deg, 100%, 50%);
+}
+.image-container:hover > .equilibrium-image {
+  opacity: 0.3;
+}
+.image-container:hover > .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  right: 42%;
+}
+
+.equilibrium-image {
+  width: 100%;
+  border-radius: 3.5%;
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+}
+
+h3 {
+  color: hsl(0deg, 0%, 100%);
+}
+h3:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+
+p {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 18px;
+}
+
+.content-container {
+  padding: 6%;
+}
+
+.description > * {
+  margin-bottom: 15px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+.price > :first-child {
+  color: hsl(178deg, 100%, 50%);
+}
+.price > :last-child {
+  color: hsl(215deg, 51%, 70%);
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+span > img {
+  margin-right: 5px;
+}
+
+hr {
+  border: 0.1px solid hsl(215deg, 32%, 27%);
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+}
+.author-container > span {
+  color: hsl(215deg, 51%, 70%);
+}
+.author-container > span > span {
+  margin-left: 5px;
+  color: white;
+}
+.author-container > span > span:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+.author-container > img {
+  width: 10%;
+  border: 2px solid gray;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.attribution {
+  text-align: center;
+  color: hsl(215deg, 51%, 70%);
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    width: 95%;
+  }
+}/*# sourceMappingURL=styles.css.map */

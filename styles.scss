@@ -1,0 +1,150 @@
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$veryDarkBluemMainBG: hsl(217, 54%, 11%);
+$veryDarkBlueCardBG: hsl(216, 50%, 16%);
+$veryDarkBlueLine: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+$font: 'Outfit';
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(216, 55, 11);
+    font-family: $font;
+}
+
+main {
+    width: 25%;
+    margin: 5% auto;
+    background-color: $veryDarkBlueCardBG;
+    border-radius: 3.5%;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 3.5%;
+
+    &:hover {
+        background-color: $cyan;
+    }
+
+    &:hover>.equilibrium-image {
+        opacity: 0.3;
+
+    }
+
+    &:hover>.overlay {
+        opacity: 1;
+
+    }
+}
+
+.overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    right: 42%;
+}
+
+.equilibrium-image {
+    width: 100%;
+    border-radius: 3.5%;
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+}
+
+h3 {
+    color: $white;
+
+    &:hover {
+        color: $cyan;
+    }
+}
+
+p {
+    color: $softBlue;
+    font-size: 18px;
+}
+
+.content-container {
+    padding: 6%;
+}
+
+.description {
+
+    &>* {
+        margin-bottom: 15px;
+    }
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+
+    &>:first-child {
+        color: $cyan;
+    }
+
+    &>:last-child {
+        color: $softBlue;
+    }
+}
+
+span {
+    display: flex;
+    align-items: center;
+
+    &>img {
+        margin-right: 5px;
+    }
+}
+
+hr {
+    border: 0.1px solid $veryDarkBlueLine;
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+
+    &>span {
+        color: $softBlue;
+
+        &>span {
+            margin-left: 5px;
+            color: white;
+
+            &:hover {
+                color: $cyan;
+            }
+        }
+    }
+
+    &>img {
+        width: 10%;
+        border: 2px solid gray;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+}
+
+.attribution {
+    text-align: center;
+    color: $softBlue;
+}
+
+@media screen and (max-width:375px) {
+    main {
+        width: 95%;
+    }
+}
